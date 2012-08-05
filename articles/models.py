@@ -75,6 +75,7 @@ User.get_name = get_name
 class Tag(models.Model):
     name = models.CharField(max_length=64, unique=True)
     slug = models.CharField(max_length=64, unique=True, null=True, blank=True)
+    description = models.TextField(blank=True, null=True)
 
     def __unicode__(self):
         return self.name
@@ -449,7 +450,7 @@ class Article(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('articles_display_article', (self.publish_date.year, self.slug))
+        return ( 'articledirView', (), {'slug' : self.slug} )
 
     def _get_teaser(self):
         """
@@ -463,6 +464,9 @@ class Article(models.Model):
 
         return self._teaser
     teaser = property(_get_teaser)
+    
+    def getTeaser(self, wordlim):
+        return truncate_html_words(self.rendered_content, wordlim)
 
     def get_next_article(self):
         """Determines the next live article"""

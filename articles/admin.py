@@ -1,10 +1,12 @@
-import logging
-
 from django.contrib import admin
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 from forms import ArticleAdminForm
 from models import Tag, Article, ArticleStatus, Attachment
+import logging
+
+from tinymce.widgets import TinyMCE
 
 log = logging.getLogger('articles.admin')
 
@@ -24,6 +26,8 @@ class AttachmentInline(admin.TabularInline):
     model = Attachment
     extra = 5
     max_num = 15
+
+
 
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ('title', 'tag_count', 'status', 'author', 'publish_date',
@@ -61,6 +65,14 @@ class ArticleAdmin(admin.ModelAdmin):
 
     filter_horizontal = ('tags', 'followup_for', 'related_articles')
     prepopulated_fields = {'slug': ('title',)}
+
+    def formfield_for_dbfield(self, db_field, **kwargs):
+        if db_field.name in ('content'):
+            return db_field.formfield(widget=TinyMCE(
+                attrs={'cols': 80, 'rows': 30},
+                mce_attrs={'external_link_list_url': reverse('tinymce.views.flatpages_link_list')},
+            ))
+        return super(ArticleAdmin, self).formfield_for_dbfield(db_field, **kwargs)
 
     def tag_count(self, obj):
         return str(obj.tags.count())

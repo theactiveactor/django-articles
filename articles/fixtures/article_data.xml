@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+  <object pk="1" model="articles.tag">
+    <field type="CharField" name="name">tag1</field>
+    <field type="CharField" name="slug">tag1</field>
+  </object>
+  <object pk="2" model="articles.tag">
+    <field type="CharField" name="name">tag2</field>
+    <field type="CharField" name="slug">tag2</field>
+  </object>
+  <object pk="3" model="articles.tag">
+    <field type="CharField" name="name">tag3</field>
+    <field type="CharField" name="slug">tag3</field>
+  </object>
+  <object pk="4" model="articles.tag">
+    <field type="CharField" name="name">tag4</field>
+    <field type="CharField" name="slug">tag4</field>
+  </object>
+  <object pk="5" model="articles.tag">
+    <field type="CharField" name="name">tag5</field>
+    <field type="CharField" name="slug">tag5</field>
+  </object>
+  <object pk="1" model="articles.articlestatus">
+    <field type="CharField" name="name">Draft</field>
+    <field type="IntegerField" name="ordering">0</field>
+    <field type="BooleanField" name="is_live">False</field>
+  </object>
+  <object pk="2" model="articles.articlestatus">
+    <field type="CharField" name="name">Finished</field>
+    <field type="IntegerField" name="ordering">1</field>
+    <field type="BooleanField" name="is_live">True</field>
+  </object>
+  <object pk="4" model="articles.article">
+    <field type="CharField" name="title">Article 4</field>
+    <field type="SlugField" name="slug">article-4</field>
+    <field to="articles.articlestatus" name="status" rel="ManyToOneRel">2</field>
+    <field to="auth.user" name="author" rel="ManyToOneRel">1</field>
+    <field type="TextField" name="keywords"/>
+    <field type="TextField" name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales, ante sed imperdiet rhoncus, est augue tempor diam, eu fermentum odio ante rhoncus orci. Aenean ultrices cursus nisi, sit amet malesuada ligula ultricies et. Nam lobortis, quam sagittis pharetra viverra, purus metus tempus lacus, eget convallis eros nunc nec mi. Fusce pellentesque enim non nisl ullamcorper vel fringilla arcu fringilla. Curabitur sollicitudin tellus non sem lobortis et molestie velit congue. Aliquam aliquam, lorem ut feugiat ...</field>
+    <field type="CharField" name="markup">h</field>
+    <field type="TextField" name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales, ante sed imperdiet rhoncus, est augue tempor diam, eu fermentum odio ante rhoncus orci. Aenean ultrices cursus nisi, sit amet malesuada ligula ultricies et. Nam lobortis, quam sagittis pharetra viverra, purus metus tempus lacus, eget convallis eros nunc nec mi. Fusce pellentesque enim non nisl ullamcorper vel fringilla arcu fringilla. Curabitur sollicitudin tellus non sem lobortis et molestie velit congue. Aliquam aliquam, lorem ut feugiat dapibus, felis augue aliquet tellus, quis consectetur lectus justo sed felis. Nam et felis augue, eu pharetra lorem. Nulla ultricies sodales nisi quis feugiat. Mauris porta laoreet nisl sollicitudin convallis. Nulla porta, arcu nec pulvinar tempor, odio odio semper ante, et hendrerit risus eros in quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean nisi nunc, fermentum nec tristique at, aliquam a velit. Mauris tempor fermentum enim in scelerisque. Vestibulum congue accumsan cursus.
+
+Phasellus sed urna massa, non tristique libero. Integer non dolor enim, nec ultrices leo. Vivamus aliquet, urna non hendrerit scelerisque, erat urna accumsan magna, ac ultricies nisl eros sit amet magna. Donec vel sem eget augue ultrices lacinia. Donec placerat, metus at tempus lobortis, quam lorem pulvinar neque, vel dictum tellus arcu non nulla. Donec lobortis augue et felis commodo pellentesque. Vestibulum ullamcorper odio ut leo condimentum ornare. Vivamus adipiscing nulla eget velit aliquet sed sagittis nunc aliquet. Nunc cursus, velit tempus aliquam rutrum, nisi ligula fermentum justo, vitae tristique nibh eros sit amet ligula. Aliquam at nisi arcu. Nulla convallis, ipsum et ultrices sodales, lectus nibh malesuada ante, lacinia congue nibh justo vel arcu.
+
+Phasellus et iaculis libero. Sed nisl dui, commodo at sollicitudin euismod, lobortis nec magna. Maecenas ut eleifend eros. Vivamus ut orci lorem, ac varius felis. Mauris eget sodales tellus. Nunc auctor faucibus fermentum. Pellentesque laoreet faucibus iaculis. Sed eu neque justo, lobortis ultricies enim. In libero orci, aliquam ut semper ut, varius quis nibh. Phasellus eleifend faucibus justo vel dignissim. Sed mauris augue, pharetra ac euismod nec, interdum non mi. Vestibulum euismod ligula eu nisl tincidunt ultrices.
+
+Integer vitae convallis sapien. Nullam sit amet iaculis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse sit amet nibh metus, ut molestie ligula. Fusce dapibus dictum risus tincidunt mollis. Sed ullamcorper, ipsum ut congue varius, nibh lectus sodales nibh, et accumsan arcu diam sit amet sapien. Aliquam erat volutpat. Nulla eu sapien felis. Morbi non eleifend tortor. Ut at tellus orci. In hac habitasse platea dictumst. Suspendisse vestibulum, urna id sagittis imperdiet, quam orci placerat dui, sed adipiscing diam ante at mi. Aenean tempus sapien ut velit commodo quis dictum velit dictum.
+
+Donec vitae quam sit amet lectus cursus dignissim a vel risus. Donec vel ante eu augue dignissim venenatis. Donec lacinia, arcu non suscipit pretium, elit arcu pulvinar velit, id vestibulum lacus quam id magna. In hac habitasse platea dictumst. Praesent elementum ultrices nibh nec pulvinar. Donec mattis luctus quam, et posuere nunc tincidunt ac. Nullam at tortor augue, eu viverra turpis. Suspendisse iaculis consectetur mattis. Etiam sit amet consectetur tellus. Praesent nisi metus, hendrerit et varius quis, porttitor et felis. Duis feugiat, urna id adipiscing porttitor, velit tellus hendrerit nisl, vitae fermentum erat odio eu diam. Cras quis augue purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean metus lectus, tempus eu volutpat vel, vulputate eu velit.</field>
+    <field type="TextField" name="rendered_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales, ante sed imperdiet rhoncus, est augue tempor diam, eu fermentum odio ante rhoncus orci. Aenean ultrices cursus nisi, sit amet malesuada ligula ultricies et. Nam lobortis, quam sagittis pharetra viverra, purus metus tempus lacus, eget convallis eros nunc nec mi. Fusce pellentesque enim non nisl ullamcorper vel fringilla arcu fringilla. Curabitur sollicitudin tellus non sem lobortis et molestie velit congue. Aliquam aliquam, lorem ut feugiat dapibus, felis augue aliquet tellus, quis consectetur lectus justo sed felis. Nam et felis augue, eu pharetra lorem. Nulla ultricies sodales nisi quis feugiat. Mauris porta laoreet nisl sollicitudin convallis. Nulla porta, arcu nec pulvinar tempor, odio odio semper ante, et hendrerit risus eros in quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean nisi nunc, fermentum nec tristique at, aliquam a velit. Mauris tempor fermentum enim in scelerisque. Vestibulum congue accumsan cursus.
+
+Phasellus sed urna massa, non tristique libero. Integer non dolor enim, nec ultrices leo. Vivamus aliquet, urna non hendrerit scelerisque, erat urna accumsan magna, ac ultricies nisl eros sit amet magna. Donec vel sem eget augue ultrices lacinia. Donec placerat, metus at tempus lobortis, quam lorem pulvinar neque, vel dictum tellus arcu non nulla. Donec lobortis augue et felis commodo pellentesque. Vestibulum ullamcorper odio ut leo condimentum ornare. Vivamus adipiscing nulla eget velit aliquet sed sagittis nunc aliquet. Nunc cursus, velit tempus aliquam rutrum, nisi ligula fermentum justo, vitae tristique nibh eros sit amet ligula. Aliquam at nisi arcu. Nulla convallis, ipsum et ultrices sodales, lectus nibh malesuada ante, lacinia congue nibh justo vel arcu.
+
+Phasellus et iaculis libero. Sed nisl dui, commodo at sollicitudin euismod, lobortis nec magna. Maecenas ut eleifend eros. Vivamus ut orci lorem, ac varius felis. Mauris eget sodales tellus. Nunc auctor faucibus fermentum. Pellentesque laoreet faucibus iaculis. Sed eu neque justo, lobortis ultricies enim. In libero orci, aliquam ut semper ut, varius quis nibh. Phasellus eleifend faucibus justo vel dignissim. Sed mauris augue, pharetra ac euismod nec, interdum non mi. Vestibulum euismod ligula eu nisl tincidunt ultrices.
+
+Integer vitae convallis sapien. Nullam sit amet iaculis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse sit amet nibh metus, ut molestie ligula. Fusce dapibus dictum risus tincidunt mollis. Sed ullamcorper, ipsum ut congue varius, nibh lectus sodales nibh, et accumsan arcu diam sit amet sapien. Aliquam erat volutpat. Nulla eu sapien felis. Morbi non eleifend tortor. Ut at tellus orci. In hac habitasse platea dictumst. Suspendisse vestibulum, urna id sagittis imperdiet, quam orci placerat dui, sed adipiscing diam ante at mi. Aenean tempus sapien ut velit commodo quis dictum velit dictum.
+
+Donec vitae quam sit amet lectus cursus dignissim a vel risus. Donec vel ante eu augue dignissim venenatis. Donec lacinia, arcu non suscipit pretium, elit arcu pulvinar velit, id vestibulum lacus quam id magna. In hac habitasse platea dictumst. Praesent elementum ultrices nibh nec pulvinar. Donec mattis luctus quam, et posuere nunc tincidunt ac. Nullam at tortor augue, eu viverra turpis. Suspendisse iaculis consectetur mattis. Etiam sit amet consectetur tellus. Praesent nisi metus, hendrerit et varius quis, porttitor et felis. Duis feugiat, urna id adipiscing porttitor, velit tellus hendrerit nisl, vitae fermentum erat odio eu diam. Cras quis augue purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean metus lectus, tempus eu volutpat vel, vulputate eu velit.</field>
+    <field type="BooleanField" name="auto_tag">False</field>
+    <field type="DateTimeField" name="publish_date">2012-07-15 22:10:20</field>
+    <field type="DateTimeField" name="expiration_date">
+      <None/>
+    </field>
+    <field type="BooleanField" name="is_active">True</field>
+    <field type="BooleanField" name="login_required">False</field>
+    <field type="BooleanField" name="use_addthis_button">True</field>
+    <field type="BooleanField" name="addthis_use_author">True</field>
+    <field type="CharField" name="addthis_username">admin</field>
+    <field to="sites.site" name="sites" rel="ManyToManyRel"/>
+    <field to="articles.tag" name="tags" rel="ManyToManyRel">
+      <object pk="4"/>
+    </field>
+    <field to="articles.article" name="followup_for" rel="ManyToManyRel"/>
+    <field to="articles.article" name="related_articles" rel="ManyToManyRel"/>
+  </object>
+  <object pk="3" model="articles.article">
+    <field type="CharField" name="title">Article 3</field>
+    <field type="SlugField" name="slug">article-3</field>
+    <field to="articles.articlestatus" name="status" rel="ManyToOneRel">2</field>
+    <field to="auth.user" name="author" rel="ManyToOneRel">1</field>
+    <field type="TextField" name="keywords"/>
+    <field type="TextField" name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales, ante sed imperdiet rhoncus, est augue tempor diam, eu fermentum odio ante rhoncus orci. Aenean ultrices cursus nisi, sit amet malesuada ligula ultricies et. Nam lobortis, quam sagittis pharetra viverra, purus metus tempus lacus, eget convallis eros nunc nec mi. Fusce pellentesque enim non nisl ullamcorper vel fringilla arcu fringilla. Curabitur sollicitudin tellus non sem lobortis et molestie velit congue. Aliquam aliquam, lorem ut feugiat ...</field>
+    <field type="CharField" name="markup">h</field>
+    <field type="TextField" name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales, ante sed imperdiet rhoncus, est augue tempor diam, eu fermentum odio ante rhoncus orci. Aenean ultrices cursus nisi, sit amet malesuada ligula ultricies et. Nam lobortis, quam sagittis pharetra viverra, purus metus tempus lacus, eget convallis eros nunc nec mi. Fusce pellentesque enim non nisl ullamcorper vel fringilla arcu fringilla. Curabitur sollicitudin tellus non sem lobortis et molestie velit congue. Aliquam aliquam, lorem ut feugiat dapibus, felis augue aliquet tellus, quis consectetur lectus justo sed felis. Nam et felis augue, eu pharetra lorem. Nulla ultricies sodales nisi quis feugiat. Mauris porta laoreet nisl sollicitudin convallis. Nulla porta, arcu nec pulvinar tempor, odio odio semper ante, et hendrerit risus eros in quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean nisi nunc, fermentum nec tristique at, aliquam a velit. Mauris tempor fermentum enim in scelerisque. Vestibulum congue accumsan cursus.
+
+Phasellus sed urna massa, non tristique libero. Integer non dolor enim, nec ultrices leo. Vivamus aliquet, urna non hendrerit scelerisque, erat urna accumsan magna, ac ultricies nisl eros sit amet magna. Donec vel sem eget augue ultrices lacinia. Donec placerat, metus at tempus lobortis, quam lorem pulvinar neque, vel dictum tellus arcu non nulla. Donec lobortis augue et felis commodo pellentesque. Vestibulum ullamcorper odio ut leo condimentum ornare. Vivamus adipiscing nulla eget velit aliquet sed sagittis nunc aliquet. Nunc cursus, velit tempus aliquam rutrum, nisi ligula fermentum justo, vitae tristique nibh eros sit amet ligula. Aliquam at nisi arcu. Nulla convallis, ipsum et ultrices sodales, lectus nibh malesuada ante, lacinia congue nibh justo vel arcu.
+
+Phasellus et iaculis libero. Sed nisl dui, commodo at sollicitudin euismod, lobortis nec magna. Maecenas ut eleifend eros. Vivamus ut orci lorem, ac varius felis. Mauris eget sodales tellus. Nunc auctor faucibus fermentum. Pellentesque laoreet faucibus iaculis. Sed eu neque justo, lobortis ultricies enim. In libero orci, aliquam ut semper ut, varius quis nibh. Phasellus eleifend faucibus justo vel dignissim. Sed mauris augue, pharetra ac euismod nec, interdum non mi. Vestibulum euismod ligula eu nisl tincidunt ultrices.
+
+Integer vitae convallis sapien. Nullam sit amet iaculis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse sit amet nibh metus, ut molestie ligula. Fusce dapibus dictum risus tincidunt mollis. Sed ullamcorper, ipsum ut congue varius, nibh lectus sodales nibh, et accumsan arcu diam sit amet sapien. Aliquam erat volutpat. Nulla eu sapien felis. Morbi non eleifend tortor. Ut at tellus orci. In hac habitasse platea dictumst. Suspendisse vestibulum, urna id sagittis imperdiet, quam orci placerat dui, sed adipiscing diam ante at mi. Aenean tempus sapien ut velit commodo quis dictum velit dictum.
+
+Donec vitae quam sit amet lectus cursus dignissim a vel risus. Donec vel ante eu augue dignissim venenatis. Donec lacinia, arcu non suscipit pretium, elit arcu pulvinar velit, id vestibulum lacus quam id magna. In hac habitasse platea dictumst. Praesent elementum ultrices nibh nec pulvinar. Donec mattis luctus quam, et posuere nunc tincidunt ac. Nullam at tortor augue, eu viverra turpis. Suspendisse iaculis consectetur mattis. Etiam sit amet consectetur tellus. Praesent nisi metus, hendrerit et varius quis, porttitor et felis. Duis feugiat, urna id adipiscing porttitor, velit tellus hendrerit nisl, vitae fermentum erat odio eu diam. Cras quis augue purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean metus lectus, tempus eu volutpat vel, vulputate eu velit.</field>
+    <field type="TextField" name="rendered_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales, ante sed imperdiet rhoncus, est augue tempor diam, eu fermentum odio ante rhoncus orci. Aenean ultrices cursus nisi, sit amet malesuada ligula ultricies et. Nam lobortis, quam sagittis pharetra viverra, purus metus tempus lacus, eget convallis eros nunc nec mi. Fusce pellentesque enim non nisl ullamcorper vel fringilla arcu fringilla. Curabitur sollicitudin tellus non sem lobortis et molestie velit congue. Aliquam aliquam, lorem ut feugiat dapibus, felis augue aliquet tellus, quis consectetur lectus justo sed felis. Nam et felis augue, eu pharetra lorem. Nulla ultricies sodales nisi quis feugiat. Mauris porta laoreet nisl sollicitudin convallis. Nulla porta, arcu nec pulvinar tempor, odio odio semper ante, et hendrerit risus eros in quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean nisi nunc, fermentum nec tristique at, aliquam a velit. Mauris tempor fermentum enim in scelerisque. Vestibulum congue accumsan cursus.
+
+Phasellus sed urna massa, non tristique libero. Integer non dolor enim, nec ultrices leo. Vivamus aliquet, urna non hendrerit scelerisque, erat urna accumsan magna, ac ultricies nisl eros sit amet magna. Donec vel sem eget augue ultrices lacinia. Donec placerat, metus at tempus lobortis, quam lorem pulvinar neque, vel dictum tellus arcu non nulla. Donec lobortis augue et felis commodo pellentesque. Vestibulum ullamcorper odio ut leo condimentum ornare. Vivamus adipiscing nulla eget velit aliquet sed sagittis nunc aliquet. Nunc cursus, velit tempus aliquam rutrum, nisi ligula fermentum justo, vitae tristique nibh eros sit amet ligula. Aliquam at nisi arcu. Nulla convallis, ipsum et ultrices sodales, lectus nibh malesuada ante, lacinia congue nibh justo vel arcu.
+
+Phasellus et iaculis libero. Sed nisl dui, commodo at sollicitudin euismod, lobortis nec magna. Maecenas ut eleifend eros. Vivamus ut orci lorem, ac varius felis. Mauris eget sodales tellus. Nunc auctor faucibus fermentum. Pellentesque laoreet faucibus iaculis. Sed eu neque justo, lobortis ultricies enim. In libero orci, aliquam ut semper ut, varius quis nibh. Phasellus eleifend faucibus justo vel dignissim. Sed mauris augue, pharetra ac euismod nec, interdum non mi. Vestibulum euismod ligula eu nisl tincidunt ultrices.
+
+Integer vitae convallis sapien. Nullam sit amet iaculis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse sit amet nibh metus, ut molestie ligula. Fusce dapibus dictum risus tincidunt mollis. Sed ullamcorper, ipsum ut congue varius, nibh lectus sodales nibh, et accumsan arcu diam sit amet sapien. Aliquam erat volutpat. Nulla eu sapien felis. Morbi non eleifend tortor. Ut at tellus orci. In hac habitasse platea dictumst. Suspendisse vestibulum, urna id sagittis imperdiet, quam orci placerat dui, sed adipiscing diam ante at mi. Aenean tempus sapien ut velit commodo quis dictum velit dictum.
+
+Donec vitae quam sit amet lectus cursus dignissim a vel risus. Donec vel ante eu augue dignissim venenatis. Donec lacinia, arcu non suscipit pretium, elit arcu pulvinar velit, id vestibulum lacus quam id magna. In hac habitasse platea dictumst. Praesent elementum ultrices nibh nec pulvinar. Donec mattis luctus quam, et posuere nunc tincidunt ac. Nullam at tortor augue, eu viverra turpis. Suspendisse iaculis consectetur mattis. Etiam sit amet consectetur tellus. Praesent nisi metus, hendrerit et varius quis, porttitor et felis. Duis feugiat, urna id adipiscing porttitor, velit tellus hendrerit nisl, vitae fermentum erat odio eu diam. Cras quis augue purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean metus lectus, tempus eu volutpat vel, vulputate eu velit.</field>
+    <field type="BooleanField" name="auto_tag">True</field>
+    <field type="DateTimeField" name="publish_date">2012-07-15 22:10:08</field>
+    <field type="DateTimeField" name="expiration_date">
+      <None/>
+    </field>
+    <field type="BooleanField" name="is_active">True</field>
+    <field type="BooleanField" name="login_required">False</field>
+    <field type="BooleanField" name="use_addthis_button">True</field>
+    <field type="BooleanField" name="addthis_use_author">True</field>
+    <field type="CharField" name="addthis_username">admin</field>
+    <field to="sites.site" name="sites" rel="ManyToManyRel"/>
+    <field to="articles.tag" name="tags" rel="ManyToManyRel">
+      <object pk="1"/>
+      <object pk="2"/>
+      <object pk="3"/>
+    </field>
+    <field to="articles.article" name="followup_for" rel="ManyToManyRel"/>
+    <field to="articles.article" name="related_articles" rel="ManyToManyRel"/>
+  </object>
+  <object pk="2" model="articles.article">
+    <field type="CharField" name="title">Article 2</field>
+    <field type="SlugField" name="slug">article-2</field>
+    <field to="articles.articlestatus" name="status" rel="ManyToOneRel">2</field>
+    <field to="auth.user" name="author" rel="ManyToOneRel">1</field>
+    <field type="TextField" name="keywords"/>
+    <field type="TextField" name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales, ante sed imperdiet rhoncus, est augue tempor diam, eu fermentum odio ante rhoncus orci. Aenean ultrices cursus nisi, sit amet malesuada ligula ultricies et. Nam lobortis, quam sagittis pharetra viverra, purus metus tempus lacus, eget convallis eros nunc nec mi. Fusce pellentesque enim non nisl ullamcorper vel fringilla arcu fringilla. Curabitur sollicitudin tellus non sem lobortis et molestie velit congue. Aliquam aliquam, lorem ut feugiat ...</field>
+    <field type="CharField" name="markup">h</field>
+    <field type="TextField" name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales, ante sed imperdiet rhoncus, est augue tempor diam, eu fermentum odio ante rhoncus orci. Aenean ultrices cursus nisi, sit amet malesuada ligula ultricies et. Nam lobortis, quam sagittis pharetra viverra, purus metus tempus lacus, eget convallis eros nunc nec mi. Fusce pellentesque enim non nisl ullamcorper vel fringilla arcu fringilla. Curabitur sollicitudin tellus non sem lobortis et molestie velit congue. Aliquam aliquam, lorem ut feugiat dapibus, felis augue aliquet tellus, quis consectetur lectus justo sed felis. Nam et felis augue, eu pharetra lorem. Nulla ultricies sodales nisi quis feugiat. Mauris porta laoreet nisl sollicitudin convallis. Nulla porta, arcu nec pulvinar tempor, odio odio semper ante, et hendrerit risus eros in quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean nisi nunc, fermentum nec tristique at, aliquam a velit. Mauris tempor fermentum enim in scelerisque. Vestibulum congue accumsan cursus.
+
+Phasellus sed urna massa, non tristique libero. Integer non dolor enim, nec ultrices leo. Vivamus aliquet, urna non hendrerit scelerisque, erat urna accumsan magna, ac ultricies nisl eros sit amet magna. Donec vel sem eget augue ultrices lacinia. Donec placerat, metus at tempus lobortis, quam lorem pulvinar neque, vel dictum tellus arcu non nulla. Donec lobortis augue et felis commodo pellentesque. Vestibulum ullamcorper odio ut leo condimentum ornare. Vivamus adipiscing nulla eget velit aliquet sed sagittis nunc aliquet. Nunc cursus, velit tempus aliquam rutrum, nisi ligula fermentum justo, vitae tristique nibh eros sit amet ligula. Aliquam at nisi arcu. Nulla convallis, ipsum et ultrices sodales, lectus nibh malesuada ante, lacinia congue nibh justo vel arcu.
+
+Phasellus et iaculis libero. Sed nisl dui, commodo at sollicitudin euismod, lobortis nec magna. Maecenas ut eleifend eros. Vivamus ut orci lorem, ac varius felis. Mauris eget sodales tellus. Nunc auctor faucibus fermentum. Pellentesque laoreet faucibus iaculis. Sed eu neque justo, lobortis ultricies enim. In libero orci, aliquam ut semper ut, varius quis nibh. Phasellus eleifend faucibus justo vel dignissim. Sed mauris augue, pharetra ac euismod nec, interdum non mi. Vestibulum euismod ligula eu nisl tincidunt ultrices.
+
+Integer vitae convallis sapien. Nullam sit amet iaculis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse sit amet nibh metus, ut molestie ligula. Fusce dapibus dictum risus tincidunt mollis. Sed ullamcorper, ipsum ut congue varius, nibh lectus sodales nibh, et accumsan arcu diam sit amet sapien. Aliquam erat volutpat. Nulla eu sapien felis. Morbi non eleifend tortor. Ut at tellus orci. In hac habitasse platea dictumst. Suspendisse vestibulum, urna id sagittis imperdiet, quam orci placerat dui, sed adipiscing diam ante at mi. Aenean tempus sapien ut velit commodo quis dictum velit dictum.
+
+Donec vitae quam sit amet lectus cursus dignissim a vel risus. Donec vel ante eu augue dignissim venenatis. Donec lacinia, arcu non suscipit pretium, elit arcu pulvinar velit, id vestibulum lacus quam id magna. In hac habitasse platea dictumst. Praesent elementum ultrices nibh nec pulvinar. Donec mattis luctus quam, et posuere nunc tincidunt ac. Nullam at tortor augue, eu viverra turpis. Suspendisse iaculis consectetur mattis. Etiam sit amet consectetur tellus. Praesent nisi metus, hendrerit et varius quis, porttitor et felis. Duis feugiat, urna id adipiscing porttitor, velit tellus hendrerit nisl, vitae fermentum erat odio eu diam. Cras quis augue purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean metus lectus, tempus eu volutpat vel, vulputate eu velit.</field>
+    <field type="TextField" name="rendered_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales, ante sed imperdiet rhoncus, est augue tempor diam, eu fermentum odio ante rhoncus orci. Aenean ultrices cursus nisi, sit amet malesuada ligula ultricies et. Nam lobortis, quam sagittis pharetra viverra, purus metus tempus lacus, eget convallis eros nunc nec mi. Fusce pellentesque enim non nisl ullamcorper vel fringilla arcu fringilla. Curabitur sollicitudin tellus non sem lobortis et molestie velit congue. Aliquam aliquam, lorem ut feugiat dapibus, felis augue aliquet tellus, quis consectetur lectus justo sed felis. Nam et felis augue, eu pharetra lorem. Nulla ultricies sodales nisi quis feugiat. Mauris porta laoreet nisl sollicitudin convallis. Nulla porta, arcu nec pulvinar tempor, odio odio semper ante, et hendrerit risus eros in quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean nisi nunc, fermentum nec tristique at, aliquam a velit. Mauris tempor fermentum enim in scelerisque. Vestibulum congue accumsan cursus.
+
+Phasellus sed urna massa, non tristique libero. Integer non dolor enim, nec ultrices leo. Vivamus aliquet, urna non hendrerit scelerisque, erat urna accumsan magna, ac ultricies nisl eros sit amet magna. Donec vel sem eget augue ultrices lacinia. Donec placerat, metus at tempus lobortis, quam lorem pulvinar neque, vel dictum tellus arcu non nulla. Donec lobortis augue et felis commodo pellentesque. Vestibulum ullamcorper odio ut leo condimentum ornare. Vivamus adipiscing nulla eget velit aliquet sed sagittis nunc aliquet. Nunc cursus, velit tempus aliquam rutrum, nisi ligula fermentum justo, vitae tristique nibh eros sit amet ligula. Aliquam at nisi arcu. Nulla convallis, ipsum et ultrices sodales, lectus nibh malesuada ante, lacinia congue nibh justo vel arcu.
+
+Phasellus et iaculis libero. Sed nisl dui, commodo at sollicitudin euismod, lobortis nec magna. Maecenas ut eleifend eros. Vivamus ut orci lorem, ac varius felis. Mauris eget sodales tellus. Nunc auctor faucibus fermentum. Pellentesque laoreet faucibus iaculis. Sed eu neque justo, lobortis ultricies enim. In libero orci, aliquam ut semper ut, varius quis nibh. Phasellus eleifend faucibus justo vel dignissim. Sed mauris augue, pharetra ac euismod nec, interdum non mi. Vestibulum euismod ligula eu nisl tincidunt ultrices.
+
+Integer vitae convallis sapien. Nullam sit amet iaculis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse sit amet nibh metus, ut molestie ligula. Fusce dapibus dictum risus tincidunt mollis. Sed ullamcorper, ipsum ut congue varius, nibh lectus sodales nibh, et accumsan arcu diam sit amet sapien. Aliquam erat volutpat. Nulla eu sapien felis. Morbi non eleifend tortor. Ut at tellus orci. In hac habitasse platea dictumst. Suspendisse vestibulum, urna id sagittis imperdiet, quam orci placerat dui, sed adipiscing diam ante at mi. Aenean tempus sapien ut velit commodo quis dictum velit dictum.
+
+Donec vitae quam sit amet lectus cursus dignissim a vel risus. Donec vel ante eu augue dignissim venenatis. Donec lacinia, arcu non suscipit pretium, elit arcu pulvinar velit, id vestibulum lacus quam id magna. In hac habitasse platea dictumst. Praesent elementum ultrices nibh nec pulvinar. Donec mattis luctus quam, et posuere nunc tincidunt ac. Nullam at tortor augue, eu viverra turpis. Suspendisse iaculis consectetur mattis. Etiam sit amet consectetur tellus. Praesent nisi metus, hendrerit et varius quis, porttitor et felis. Duis feugiat, urna id adipiscing porttitor, velit tellus hendrerit nisl, vitae fermentum erat odio eu diam. Cras quis augue purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean metus lectus, tempus eu volutpat vel, vulputate eu velit.</field>
+    <field type="BooleanField" name="auto_tag">False</field>
+    <field type="DateTimeField" name="publish_date">2012-07-15 22:09:51</field>
+    <field type="DateTimeField" name="expiration_date">
+      <None/>
+    </field>
+    <field type="BooleanField" name="is_active">True</field>
+    <field type="BooleanField" name="login_required">False</field>
+    <field type="BooleanField" name="use_addthis_button">True</field>
+    <field type="BooleanField" name="addthis_use_author">True</field>
+    <field type="CharField" name="addthis_username">admin</field>
+    <field to="sites.site" name="sites" rel="ManyToManyRel"/>
+    <field to="articles.tag" name="tags" rel="ManyToManyRel">
+      <object pk="1"/>
+      <object pk="4"/>
+      <object pk="5"/>
+    </field>
+    <field to="articles.article" name="followup_for" rel="ManyToManyRel"/>
+    <field to="articles.article" name="related_articles" rel="ManyToManyRel"/>
+  </object>
+  <object pk="1" model="articles.article">
+    <field type="CharField" name="title">Article 1</field>
+    <field type="SlugField" name="slug">article-1</field>
+    <field to="articles.articlestatus" name="status" rel="ManyToOneRel">2</field>
+    <field to="auth.user" name="author" rel="ManyToOneRel">1</field>
+    <field type="TextField" name="keywords"/>
+    <field type="TextField" name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales, ante sed imperdiet rhoncus, est augue tempor diam, eu fermentum odio ante rhoncus orci. Aenean ultrices cursus nisi, sit amet malesuada ligula ultricies et. Nam lobortis, quam sagittis pharetra viverra, purus metus tempus lacus, eget convallis eros nunc nec mi. Fusce pellentesque enim non nisl ullamcorper vel fringilla arcu fringilla. Curabitur sollicitudin tellus non sem lobortis et molestie velit congue. Aliquam aliquam, lorem ut feugiat ...</field>
+    <field type="CharField" name="markup">h</field>
+    <field type="TextField" name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales, ante sed imperdiet rhoncus, est augue tempor diam, eu fermentum odio ante rhoncus orci. Aenean ultrices cursus nisi, sit amet malesuada ligula ultricies et. Nam lobortis, quam sagittis pharetra viverra, purus metus tempus lacus, eget convallis eros nunc nec mi. Fusce pellentesque enim non nisl ullamcorper vel fringilla arcu fringilla. Curabitur sollicitudin tellus non sem lobortis et molestie velit congue. Aliquam aliquam, lorem ut feugiat dapibus, felis augue aliquet tellus, quis consectetur lectus justo sed felis. Nam et felis augue, eu pharetra lorem. Nulla ultricies sodales nisi quis feugiat. Mauris porta laoreet nisl sollicitudin convallis. Nulla porta, arcu nec pulvinar tempor, odio odio semper ante, et hendrerit risus eros in quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean nisi nunc, fermentum nec tristique at, aliquam a velit. Mauris tempor fermentum enim in scelerisque. Vestibulum congue accumsan cursus.
+
+Phasellus sed urna massa, non tristique libero. Integer non dolor enim, nec ultrices leo. Vivamus aliquet, urna non hendrerit scelerisque, erat urna accumsan magna, ac ultricies nisl eros sit amet magna. Donec vel sem eget augue ultrices lacinia. Donec placerat, metus at tempus lobortis, quam lorem pulvinar neque, vel dictum tellus arcu non nulla. Donec lobortis augue et felis commodo pellentesque. Vestibulum ullamcorper odio ut leo condimentum ornare. Vivamus adipiscing nulla eget velit aliquet sed sagittis nunc aliquet. Nunc cursus, velit tempus aliquam rutrum, nisi ligula fermentum justo, vitae tristique nibh eros sit amet ligula. Aliquam at nisi arcu. Nulla convallis, ipsum et ultrices sodales, lectus nibh malesuada ante, lacinia congue nibh justo vel arcu.
+
+Phasellus et iaculis libero. Sed nisl dui, commodo at sollicitudin euismod, lobortis nec magna. Maecenas ut eleifend eros. Vivamus ut orci lorem, ac varius felis. Mauris eget sodales tellus. Nunc auctor faucibus fermentum. Pellentesque laoreet faucibus iaculis. Sed eu neque justo, lobortis ultricies enim. In libero orci, aliquam ut semper ut, varius quis nibh. Phasellus eleifend faucibus justo vel dignissim. Sed mauris augue, pharetra ac euismod nec, interdum non mi. Vestibulum euismod ligula eu nisl tincidunt ultrices.
+
+Integer vitae convallis sapien. Nullam sit amet iaculis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse sit amet nibh metus, ut molestie ligula. Fusce dapibus dictum risus tincidunt mollis. Sed ullamcorper, ipsum ut congue varius, nibh lectus sodales nibh, et accumsan arcu diam sit amet sapien. Aliquam erat volutpat. Nulla eu sapien felis. Morbi non eleifend tortor. Ut at tellus orci. In hac habitasse platea dictumst. Suspendisse vestibulum, urna id sagittis imperdiet, quam orci placerat dui, sed adipiscing diam ante at mi. Aenean tempus sapien ut velit commodo quis dictum velit dictum.
+
+Donec vitae quam sit amet lectus cursus dignissim a vel risus. Donec vel ante eu augue dignissim venenatis. Donec lacinia, arcu non suscipit pretium, elit arcu pulvinar velit, id vestibulum lacus quam id magna. In hac habitasse platea dictumst. Praesent elementum ultrices nibh nec pulvinar. Donec mattis luctus quam, et posuere nunc tincidunt ac. Nullam at tortor augue, eu viverra turpis. Suspendisse iaculis consectetur mattis. Etiam sit amet consectetur tellus. Praesent nisi metus, hendrerit et varius quis, porttitor et felis. Duis feugiat, urna id adipiscing porttitor, velit tellus hendrerit nisl, vitae fermentum erat odio eu diam. Cras quis augue purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean metus lectus, tempus eu volutpat vel, vulputate eu velit.</field>
+    <field type="TextField" name="rendered_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales, ante sed imperdiet rhoncus, est augue tempor diam, eu fermentum odio ante rhoncus orci. Aenean ultrices cursus nisi, sit amet malesuada ligula ultricies et. Nam lobortis, quam sagittis pharetra viverra, purus metus tempus lacus, eget convallis eros nunc nec mi. Fusce pellentesque enim non nisl ullamcorper vel fringilla arcu fringilla. Curabitur sollicitudin tellus non sem lobortis et molestie velit congue. Aliquam aliquam, lorem ut feugiat dapibus, felis augue aliquet tellus, quis consectetur lectus justo sed felis. Nam et felis augue, eu pharetra lorem. Nulla ultricies sodales nisi quis feugiat. Mauris porta laoreet nisl sollicitudin convallis. Nulla porta, arcu nec pulvinar tempor, odio odio semper ante, et hendrerit risus eros in quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean nisi nunc, fermentum nec tristique at, aliquam a velit. Mauris tempor fermentum enim in scelerisque. Vestibulum congue accumsan cursus.
+
+Phasellus sed urna massa, non tristique libero. Integer non dolor enim, nec ultrices leo. Vivamus aliquet, urna non hendrerit scelerisque, erat urna accumsan magna, ac ultricies nisl eros sit amet magna. Donec vel sem eget augue ultrices lacinia. Donec placerat, metus at tempus lobortis, quam lorem pulvinar neque, vel dictum tellus arcu non nulla. Donec lobortis augue et felis commodo pellentesque. Vestibulum ullamcorper odio ut leo condimentum ornare. Vivamus adipiscing nulla eget velit aliquet sed sagittis nunc aliquet. Nunc cursus, velit tempus aliquam rutrum, nisi ligula fermentum justo, vitae tristique nibh eros sit amet ligula. Aliquam at nisi arcu. Nulla convallis, ipsum et ultrices sodales, lectus nibh malesuada ante, lacinia congue nibh justo vel arcu.
+
+Phasellus et iaculis libero. Sed nisl dui, commodo at sollicitudin euismod, lobortis nec magna. Maecenas ut eleifend eros. Vivamus ut orci lorem, ac varius felis. Mauris eget sodales tellus. Nunc auctor faucibus fermentum. Pellentesque laoreet faucibus iaculis. Sed eu neque justo, lobortis ultricies enim. In libero orci, aliquam ut semper ut, varius quis nibh. Phasellus eleifend faucibus justo vel dignissim. Sed mauris augue, pharetra ac euismod nec, interdum non mi. Vestibulum euismod ligula eu nisl tincidunt ultrices.
+
+Integer vitae convallis sapien. Nullam sit amet iaculis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse sit amet nibh metus, ut molestie ligula. Fusce dapibus dictum risus tincidunt mollis. Sed ullamcorper, ipsum ut congue varius, nibh lectus sodales nibh, et accumsan arcu diam sit amet sapien. Aliquam erat volutpat. Nulla eu sapien felis. Morbi non eleifend tortor. Ut at tellus orci. In hac habitasse platea dictumst. Suspendisse vestibulum, urna id sagittis imperdiet, quam orci placerat dui, sed adipiscing diam ante at mi. Aenean tempus sapien ut velit commodo quis dictum velit dictum.
+
+Donec vitae quam sit amet lectus cursus dignissim a vel risus. Donec vel ante eu augue dignissim venenatis. Donec lacinia, arcu non suscipit pretium, elit arcu pulvinar velit, id vestibulum lacus quam id magna. In hac habitasse platea dictumst. Praesent elementum ultrices nibh nec pulvinar. Donec mattis luctus quam, et posuere nunc tincidunt ac. Nullam at tortor augue, eu viverra turpis. Suspendisse iaculis consectetur mattis. Etiam sit amet consectetur tellus. Praesent nisi metus, hendrerit et varius quis, porttitor et felis. Duis feugiat, urna id adipiscing porttitor, velit tellus hendrerit nisl, vitae fermentum erat odio eu diam. Cras quis augue purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean metus lectus, tempus eu volutpat vel, vulputate eu velit.</field>
+    <field type="BooleanField" name="auto_tag">False</field>
+    <field type="DateTimeField" name="publish_date">2012-07-15 21:57:46</field>
+    <field type="DateTimeField" name="expiration_date">
+      <None/>
+    </field>
+    <field type="BooleanField" name="is_active">True</field>
+    <field type="BooleanField" name="login_required">False</field>
+    <field type="BooleanField" name="use_addthis_button">True</field>
+    <field type="BooleanField" name="addthis_use_author">True</field>
+    <field type="CharField" name="addthis_username">admin</field>
+    <field to="sites.site" name="sites" rel="ManyToManyRel"/>
+    <field to="articles.tag" name="tags" rel="ManyToManyRel">
+      <object pk="1"/>
+      <object pk="2"/>
+      <object pk="3"/>
+    </field>
+    <field to="articles.article" name="followup_for" rel="ManyToManyRel"/>
+    <field to="articles.article" name="related_articles" rel="ManyToManyRel"/>
+  </object>
+</django-objects>
