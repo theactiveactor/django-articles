@@ -100,7 +100,7 @@ class Tag(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('articles_display_tag', (self.cleaned,))
+        return ('articledirTag', (self.cleaned,))
 
     @property
     def cleaned(self):
